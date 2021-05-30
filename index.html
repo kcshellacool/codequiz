@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Code Quiz</title>
+</head>
+<body>
+<nav class="nav-bar">
+<button class="navbutton" onclick="highscores()">View High Score</button>
+<p class="float-right">Time: <span id="timer"></span></p>
+
+</nav>
+
+<div id="questionboard" class="container">
+    <h1 id="questions" class="questions">Are you Ready?</h1>
+    <button id="start" class="start" type="button" onclick = "init()">Start</button>
+    <button id="A" class="choices" type="button" onclick="next()"></button>
+    <button id="B" class="choices" type="button" onclick="next()"></button>
+    <button id="C" class="choices" type="button" onclick="next()"></button>
+    <button id="D" class="choices" type="button" onclick="next()"></button>
+    <h2 id="alert"></h2>
+</div>
+
+
+<div id="scoreboard" class="results-container">
+    <h1 class="title">Your Score</h1>
+    <h2 id="score" class="score"></h2>
+    <label for="name">Your Name</label>
+    <input type="text" id= "name" name="name">
+    <input type="submit" value="Save Score" onclick="storescore();highscores()">
+</div>
+
+<div id="highscoreboard" class="highscore-container">
+    <h1 class="title">High Score</h1>
+    <ul id="listname" class="leftcol"></ul>
+    <ul id="highscore" class="rightcol"></ul>
+    <div>
+    <button id ="back" class="leftbtn" type="button" onclick="clearscore()">Clear</button>
+    <button id ="back" class="rightbtn" type="button" onclick="back()">Back</button>
+    </div>
+</div>
+
+</body>
+<script src="assets/js/script.js"></script>
+</html>
